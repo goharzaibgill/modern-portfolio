@@ -35,7 +35,7 @@ exports.handler = async (event) => {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-3-5-sonnet-20241022',
         max_tokens: 300,
         system: systemPrompt,
         messages: messages.slice(-10),
@@ -44,8 +44,8 @@ exports.handler = async (event) => {
 
     if (!response.ok) {
       const err = await response.text();
-      console.error('Anthropic API error:', err);
-      return { statusCode: 502, headers, body: JSON.stringify({ error: 'AI service unavailable' }) };
+      console.error('Anthropic API error:', response.status, err);
+      return { statusCode: 502, headers, body: JSON.stringify({ error: 'AI service unavailable', details: err }) };
     }
 
     const data = await response.json();
@@ -57,7 +57,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ reply }),
     };
   } catch (err) {
-    console.error('Function error:', err);
-    return { statusCode: 500, headers, body: JSON.stringify({ error: 'Internal server error' }) };
+    console.error('Function error:', err.message, err.stack);
+    return { statusCode: 500, headers, body: JSON.stringify({ error: 'Internal server error', details: err.message }) };
   }
 };

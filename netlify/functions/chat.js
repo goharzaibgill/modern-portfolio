@@ -38,6 +38,9 @@ exports.handler = async (event) => {
     if (msg.match(/hello|hi|hey|salam|assalam|greet/)) {
       return "Hello! 👋 Welcome to Gohar Zaib Gill's portfolio! I'm his AI assistant. Gohar is a passionate Full-Stack Developer & BSIT student with 8+ live projects and a 3.77 CGPA. Feel free to ask me anything about his projects, skills, education, or how to get in touch!";
     }
+    if (msg.match(/language|speak|urdu|english|punjabi|communication/)) {
+      return "Gohar is multilingual! 🌍 He is fluent in:\n\n🇵🇰 Urdu — Native language\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 English — Professional proficiency (reading, writing, speaking)\n🌾 Punjabi — Mother tongue\n\nHe can communicate effectively with clients and teams in both Urdu and English!";
+    }
     return "Great question! 😊 I'm Gohar's AI assistant. I can tell you all about his projects, technical skills, educational background, leadership roles, and contact information. What would you like to know?";
   };
 

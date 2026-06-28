@@ -52,6 +52,7 @@ exports.handler = async (event) => {
     }
 
     const data = await response.json();
+    console.log('OpenRouter response status:', response.status, 'Model:', data.model, 'Usage:', data.usage);
     const reply = data.choices?.[0]?.message?.text || data.choices?.[0]?.message?.content || 'Sorry, I could not generate a response.';
 
     return {

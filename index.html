@@ -2204,7 +2204,14 @@
   function addMessage(text, sender) {
     const div = document.createElement('div');
     div.className = 'chat-msg ' + sender;
-    div.textContent = text;
+    if (sender === 'bot') {
+      div.innerHTML = text.replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank" style="color:#f59e0b; text-decoration:underline;">$1</a>'
+      );
+    } else {
+      div.textContent = text;
+    }
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
   }

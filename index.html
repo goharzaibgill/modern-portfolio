@@ -467,7 +467,7 @@
     .project-preview {
       position: relative; overflow: hidden;
       display: flex; flex-direction: column;
-      min-height: 320px; background: var(--card2);
+      min-height: 360px; background: var(--card2);
     }
     .browser-bar {
       display: flex; align-items: center; gap: 6px;
@@ -489,8 +489,12 @@
       white-space: nowrap; text-overflow: ellipsis;
     }
     .browser-body {
-      flex: 1; display: flex; align-items: center; justify-content: center;
-      padding: 1.5rem; position: relative; overflow: hidden;
+      position: relative; overflow: hidden;
+      height: 340px;
+    }
+    .browser-body iframe {
+      width: 100%; height: 100%; border: none;
+      pointer-events: none;
     }
     .browser-body::before {
       content: ''; position: absolute; inset: 0;
@@ -645,6 +649,7 @@
     @media (max-width: 768px) {
       .project-card { grid-template-columns: 1fr; }
       .project-preview { min-height: 200px; }
+      .browser-body { height: 260px; }
     }
 
     /* ========== EDUCATION ========== */
@@ -1450,7 +1455,7 @@
             <div class="browser-bar-url">pakunifind.netlify.app</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://pakunifind.netlify.app" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://pakunifind.netlify.app" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1471,7 +1476,7 @@
             <div class="browser-bar-url">grand-events.netlify.app</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://grand-events.netlify.app" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://grand-events.netlify.app" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1492,7 +1497,7 @@
             <div class="browser-bar-url">goharelectionsystem.netlify.app</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://goharelectionsystem.netlify.app" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://goharelectionsystem.netlify.app" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1513,7 +1518,7 @@
             <div class="browser-bar-url">goharzaibgill.github.io/care-society</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://goharzaibgill.github.io/care-society/" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://goharzaibgill.github.io/care-society/" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1534,7 +1539,7 @@
             <div class="browser-bar-url">goharzaibgill.github.io/gillsolutions</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://goharzaibgill.github.io/gillsolutions/" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://goharzaibgill.github.io/gillsolutions/" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1555,7 +1560,7 @@
             <div class="browser-bar-url">goharzaibgill.github.io/CGPA-calolator</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://goharzaibgill.github.io/CGPA-calolator/" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://goharzaibgill.github.io/CGPA-calolator/" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">
@@ -1576,7 +1581,7 @@
             <div class="browser-bar-url">goharresumebuilder.netlify.app</div>
           </div>
           <div class="browser-body" style="padding:0;overflow:hidden;">
-            <iframe src="https://goharresumebuilder.netlify.app" style="width:100%;height:100%;border:none;min-height:320px;transform:scale(0.75);transform-origin:top left;width:133%;pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://goharresumebuilder.netlify.app" loading="lazy" tabindex="-1"></iframe>
           </div>
         </div>
         <div class="project-content">

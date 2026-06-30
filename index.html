@@ -2160,10 +2160,11 @@
     const div = document.createElement('div');
     div.className = 'chat-msg ' + sender;
     if (sender === 'bot') {
-      div.innerHTML = text.replace(
-        /(https?:\/\/[^\s]+)/g,
-        '<a href="$1" target="_blank" style="color:#f59e0b; text-decoration:underline;">$1</a>'
-      );
+      const formatted = text
+        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color:#fbbf24; text-decoration:underline;">$1</a>')
+        .replace(/\n\n/g, '<br><br>')
+        .replace(/\n/g, '<br>');
+      div.innerHTML = formatted;
     } else {
       div.textContent = text;
     }
